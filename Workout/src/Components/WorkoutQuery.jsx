@@ -9,6 +9,9 @@ import {
   Grid,
 } from "@mui/material";
 
+const token = import.meta.env.VITE_SOME_KEY;
+console.log(token);
+
 const WorkoutQuery = () => {
   const [dropdownValue2, setDropdownValue2] = useState("");
   const [dropdownValue3, setDropdownValue3] = useState("");
