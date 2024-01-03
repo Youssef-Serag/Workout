@@ -13,7 +13,7 @@ import EmptyPage from "./EmptyPage";
 
 const token = import.meta.env.VITE_SOME_KEY;
 
-const WorkoutQuery = () => {
+const WorkoutQuery = ({ onAdd }) => {
   const [type, setType] = useState("");
   const [muscle, setMuscle] = useState("");
   const [difficulty, setDifficulty] = useState("");
@@ -140,7 +140,11 @@ const WorkoutQuery = () => {
           </Grid>
         </form>
       </Box>
-      {data.length > 0 ? <WorkoutContainer data={data} /> : <EmptyPage />}
+      {data.length > 0 ? (
+        <WorkoutContainer data={data} onAdd={onAdd} />
+      ) : (
+        <EmptyPage />
+      )}
     </>
   );
 };

@@ -2,7 +2,7 @@ import React from "react";
 import WorkoutCard from "./WorkoutCard";
 import { Grid } from "@mui/material";
 
-const WorkoutContainer = ({ data }) => {
+const WorkoutContainer = ({ data, onAdd }) => {
   return (
     <div>
       <Grid
@@ -20,6 +20,7 @@ const WorkoutContainer = ({ data }) => {
               muscle={workout.muscle}
               equipment={workout.equipment}
               instructions={workout.instructions}
+              onAdd={onAdd}
             />
           </Grid>
         ))}
