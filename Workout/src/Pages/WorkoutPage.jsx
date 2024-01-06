@@ -1,6 +1,7 @@
 import { Container, Typography } from "@mui/material";
 import WorkoutQuery from "../Components/WorkoutQuery";
 import { useState, useEffect } from "react";
+import SaveWorkout from "../Components/SaveWorkout";
 
 const MainPage = () => {
   const [data, setData] = useState([]);
@@ -23,6 +24,7 @@ const MainPage = () => {
         Workout Page
       </Typography>
       <WorkoutQuery onAdd={handleData} />
+      <SaveWorkout data={data} />
     </Container>
   );
 };
