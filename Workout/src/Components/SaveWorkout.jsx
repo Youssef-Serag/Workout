@@ -16,7 +16,7 @@ const SaveWorkout = ({ data }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(data);
+    console.log(workoutName, data);
   };
   return (
     <div>
